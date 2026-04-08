@@ -1,0 +1,104 @@
+{
+  "id": "811zvv2u",
+  "name": "apt_314",
+  "grid": [
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "cul_de_sac",
+        "openDirection": "north"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "cul_de_sac",
+        "openDirection": "west"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "cul_de_sac",
+        "openDirection": "east"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 3.14
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "cul_de_sac",
+        "openDirection": "south"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "8zfl1cft",
+  "name": "house5",
+  "grid": [
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "house",
+        "houseNumber": 5
+      },
+      {
+        "type": "house",
+        "houseNumber": 5
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "house",
+        "houseNumber": 5
+      },
+      {
+        "type": "house",
+        "houseNumber": 5
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ]
+  ]
+}

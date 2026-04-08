@@ -1,0 +1,91 @@
+{
+  "id": "l5vpr2ea",
+  "name": "park_cross",
+  "grid": [
+    [
+      {
+        "type": "park"
+      },
+      {
+        "type": "park"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "park"
+      },
+      {
+        "type": "park"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "park"
+      },
+      {
+        "type": "park"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "park"
+      },
+      {
+        "type": "park"
+      }
+    ]
+  ]
+}

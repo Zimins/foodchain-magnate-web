@@ -1,0 +1,94 @@
+{
+  "id": "9881lgjq",
+  "name": "lemon_square",
+  "grid": [
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "drink_supplier",
+        "drinkType": "lemonade"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "drink_supplier",
+        "drinkType": "lemonade"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "drink_supplier",
+        "drinkType": "lemonade"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "empty"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      }
+    ]
+  ]
+}

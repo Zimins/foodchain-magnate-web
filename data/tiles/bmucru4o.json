@@ -1,0 +1,100 @@
+{
+  "id": "bmucru4o",
+  "name": "apt_1",
+  "grid": [
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "road"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "apartment",
+        "houseNumber": 9.75
+      },
+      {
+        "type": "empty"
+      }
+    ],
+    [
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "road"
+      },
+      {
+        "type": "empty"
+      },
+      {
+        "type": "empty"
+      }
+    ]
+  ]
+}
