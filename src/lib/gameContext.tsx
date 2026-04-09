@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from "react";
 import type { GameState, GameAction, RoomInfo } from "@/game/types";
-import { getSocket, connectSocket, disconnectSocket, removeAllListeners, type GameSocket } from "./socket";
+import { getSocket, connectSocket, disconnectSocket, type GameSocket } from "./socket";
 
 interface GameContextValue {
   gameState: GameState | null;
@@ -52,7 +52,11 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     }
 
     return () => {
-      removeAllListeners();
+      // Only remove game-specific listeners, keep socket alive across page navigations
+      socket.off("game_state");
+      socket.off("room_info");
+      socket.off("game_error");
+      socket.off("connect", requestRoomInfo);
     };
   }, []);
 

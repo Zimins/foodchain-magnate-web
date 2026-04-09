@@ -24,7 +24,16 @@ export default function ActionPanel({ gameState, myPlayerId, isMyTurn, sendActio
 
   const { phase, workingSubPhase } = gameState;
 
-  if (phase === "setup") return <SetupPanel />;
+  if (phase === "setup") {
+    return (
+      <SetupPanel
+        gameState={gameState}
+        myPlayer={myPlayer}
+        isMyTurn={isMyTurn}
+        sendAction={sendAction}
+      />
+    );
+  }
   if (phase === "restructuring") return <RestructuringPanel player={myPlayer} sendAction={sendAction} isReady={myPlayer.isReady} />;
   if (phase === "order_of_business") return <OrderPanel gameState={gameState} isMyTurn={isMyTurn} sendAction={sendAction} />;
   if (phase === "working_9_to_5" && workingSubPhase) {
@@ -50,8 +59,65 @@ export default function ActionPanel({ gameState, myPlayerId, isMyTurn, sendActio
   return <InfoPanel title="Waiting" message="Waiting for game to progress..." />;
 }
 
-function SetupPanel() {
-  return <InfoPanel title="Setup" message="Game is being set up..." />;
+function SetupPanel({
+  gameState,
+  myPlayer,
+  isMyTurn,
+  sendAction,
+}: {
+  gameState: GameState;
+  myPlayer: { id: string; isReady: boolean; restaurants: { id: string }[]; bankReserveCard: { value: number } | null };
+  isMyTurn: boolean;
+  sendAction: (a: GameAction) => Promise<{ success: boolean; error?: string }>;
+}) {
+  if (myPlayer.isReady) {
+    return <InfoPanel title="Setup" message="Waiting for other players to place restaurants..." />;
+  }
+
+  const hasRestaurant = myPlayer.restaurants.length > 0;
+
+  return (
+    <div className="bg-white rounded-lg shadow p-4">
+      <h3 className="text-sm font-bold text-teal-700 mb-2">Setup</h3>
+
+      {/* Bank Reserve selection */}
+      {gameState.config.useBankReserve && (
+        <div className="mb-4">
+          <p className="text-[10px] text-stone-500 mb-2">Bank Reserve Card (current: ${myPlayer.bankReserveCard?.value ?? "none"})</p>
+          <div className="flex gap-2">
+            {([100, 200, 300] as const).map((val) => (
+              <button
+                key={val}
+                onClick={() => sendAction({ type: "choose_bank_reserve", value: val })}
+                className={`flex-1 py-1.5 text-xs font-bold rounded border transition-colors ${
+                  myPlayer.bankReserveCard?.value === val
+                    ? "border-teal-500 bg-teal-50 text-teal-700"
+                    : "border-stone-200 text-stone-600 hover:border-teal-300"
+                }`}
+              >
+                ${val}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Restaurant placement */}
+      {!hasRestaurant ? (
+        <div>
+          <p className="text-[10px] text-stone-500 mb-2">Click an empty spot on the map to place your starting restaurant, or pass.</p>
+          <button
+            onClick={() => sendAction({ type: "pass_starting_restaurant" })}
+            className="w-full py-2 border border-stone-300 text-stone-600 text-sm rounded-lg hover:bg-stone-50 transition-colors"
+          >
+            Pass (no restaurant)
+          </button>
+        </div>
+      ) : (
+        <InfoPanel title="" message="Restaurant placed. Waiting for others..." />
+      )}
+    </div>
+  );
 }
 
 function InfoPanel({ title, message }: { title: string; message: string }) {

@@ -9,8 +9,8 @@ export function getSocket(): GameSocket {
   if (typeof window === "undefined") {
     throw new Error("getSocket() called on the server");
   }
-  if (!socket) {
-    const url = process.env.NEXT_PUBLIC_SOCKET_URL || (typeof window !== 'undefined' ? window.location.origin : "http://localhost:3001");
+  if (!socket || socket.disconnected) {
+    const url = process.env.NEXT_PUBLIC_SOCKET_URL || window.location.origin;
     socket = io(url, {
       autoConnect: false,
       reconnection: true,
@@ -33,11 +33,5 @@ export function disconnectSocket(): void {
   if (socket) {
     socket.disconnect();
     socket = null;
-  }
-}
-
-export function removeAllListeners(): void {
-  if (socket) {
-    socket.removeAllListeners();
   }
 }

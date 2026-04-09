@@ -40,6 +40,7 @@ app.prepare().then(() => {
 
     // ---- Join Room ----
     socket.on('join_room', (roomId, playerName, callback) => {
+      console.log(`[socket] join_room: ${socket.id} -> ${roomId} as "${playerName}"`);
       const result = roomManager.joinRoom(roomId, socket.id, playerName);
       if (!result.success || !result.room) {
         callback(false, result.error);
@@ -65,6 +66,7 @@ app.prepare().then(() => {
 
     // ---- Start Game ----
     socket.on('start_game', (callback) => {
+      console.log(`[socket] start_game: ${socket.id}`);
       const room = roomManager.getRoomForSocket(socket.id);
       if (!room) {
         callback(false, 'Not in a room');
@@ -145,6 +147,7 @@ app.prepare().then(() => {
     });
 
     function handleLeave(sock: typeof socket) {
+      console.log(`[socket] handleLeave: ${sock.id}`);
       const result = roomManager.leaveRoom(sock.id);
       if (!result) return;
 
